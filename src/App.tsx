@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Hero from "./components/sections/Hero";
 import AOS from "aos";
 import Header from "./components/sections/Header";
+import Aboute from "./components/sections/Aboute";
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
     <main>
       <Header />
       <Hero />
+      <Aboute />
     </main>
   );
 }

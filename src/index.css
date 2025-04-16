@@ -1,1 +1,64 @@
 @import "tailwindcss";
+
+@layer utilities {
+  /* 🎨 پس‌زمینه‌ها */
+  .bg-hero-dark {
+    background-image: linear-gradient(to bottom, #0a0a0a, #1a1a1a, #000000);
+  }
+
+  .bg-soft-black {
+    background-color: #0a0a0a;
+  }
+
+  .bg-deep-gray {
+    background-color: #1a1a1a;
+  }
+
+  /* 🟡 رنگ طلایی برند */
+  .text-primary-gold {
+    color: #cba135;
+  }
+
+  /* 🖼️ افکت بزرگ‌نمایی نرم برای تصاویر */
+  .hover\:scale-smooth:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* ✨ دکمه با ترنزیشن رنگ و بک‌گراند */
+  .btn-transition {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-hover-gold:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #cba135;
+  }
+
+  /* 🧭 لینک‌های منو با خط طلایی انیمیشنی */
+  .nav-link {
+    position: relative;
+    padding-bottom: 0.25rem; /* pb-1 */
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #cba135;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #cba135;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}

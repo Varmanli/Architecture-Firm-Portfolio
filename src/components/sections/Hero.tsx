@@ -10,13 +10,13 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Dark overlay for better text contrast */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
 
-      {/* Centered content */}
+      {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
         <h1
-          className="text-4xl md:text-6xl font-semibold tracking-wide mb-4"
+          className="text-4xl md:text-6xl font-serif font-semibold tracking-wide mb-4 text-primary-gold"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -24,7 +24,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className="text-lg md:text-xl max-w-xl mb-6"
+          className="text-gray-300 text-lg md:text-xl max-w-xl mb-6"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -35,9 +35,12 @@ export default function Hero() {
           href="#projects"
           data-aos="fade-up"
           data-aos-delay="300"
-          className="px-6 py-3 border rounded-lg border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+          className="group inline-flex items-center gap-3 px-6 py-3 border border-white rounded-lg text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out btn-transition btn-hover-gold"
         >
           View Projects
+          <span className="transform transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
         </a>
       </div>
     </section>

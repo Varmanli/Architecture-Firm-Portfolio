@@ -7,42 +7,27 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="absolute top-0 left-0 z-30 w-full px-8 py-3 lg:px-20 flex items-center justify-between text-white">
+    <header className="absolute top-0 left-0 z-30 w-full px-5 py-4 lg:px-20 flex items-center justify-between text-white font-sans">
       {/* Logo */}
       <a href="/" className="flex items-center">
         <img src={logo} alt="logo" className="w-20 object-contain" />
       </a>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
-        <a
-          href="#home"
-          className="hover:text-gray-300 transition-colors duration-200"
-        >
-          Home
-        </a>
-        <a
-          href="#portfolio"
-          className="hover:text-gray-300 transition-colors duration-200"
-        >
-          Portfolio
-        </a>
-        <a
-          href="#contact"
-          className="hover:text-gray-300 transition-colors duration-200"
-        >
-          Contact
-        </a>
-        <a
-          href="#about-us"
-          onClick={closeMenu}
-          className="hover:text-gray-300 transition-colors duration-200"
-        >
-          About us
-        </a>
+      <nav className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wider">
+        {[
+          { label: "Home", href: "#home" },
+          { label: "Portfolio", href: "#portfolio" },
+          { label: "Contact", href: "#contact" },
+          { label: "About us", href: "#about-us" },
+        ].map(({ label, href }) => (
+          <a key={href} href={href} onClick={closeMenu} className="nav-link">
+            {label}
+          </a>
+        ))}
       </nav>
 
-      {/* Hamburger */}
+      {/* Hamburger Icon */}
       <div className="md:hidden z-40">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -80,32 +65,32 @@ export default function Header() {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out md:hidden`}
       >
-        <div className="flex flex-col justify-center items-center h-full gap-6 text-lg font-medium">
+        <div className="flex flex-col justify-center items-center h-full gap-6 text-lg font-medium tracking-wide font-sans">
           <a
             href="#home"
             onClick={closeMenu}
-            className="hover:text-gray-300 transition-colors duration-200"
+            className="hover:text-primary-gold transition-colors duration-200"
           >
             Home
           </a>
           <a
             href="#portfolio"
             onClick={closeMenu}
-            className="hover:text-gray-300 transition-colors duration-200"
+            className="hover:text-primary-gold transition-colors duration-200"
           >
             Portfolio
           </a>
           <a
             href="#contact"
             onClick={closeMenu}
-            className="hover:text-gray-300 transition-colors duration-200"
+            className="hover:text-primary-gold transition-colors duration-200"
           >
             Contact
           </a>
           <a
             href="#about-us"
             onClick={closeMenu}
-            className="hover:text-gray-300 transition-colors duration-200"
+            className="hover:text-primary-gold transition-colors duration-200"
           >
             About us
           </a>
