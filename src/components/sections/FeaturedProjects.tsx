@@ -1,6 +1,6 @@
 import { projects } from "../../data/projects";
-import { Project } from "../../types";
-import ButtonLink from "./ButtonLink";
+
+import ButtonLink from "../ui/ButtonLink";
 
 function FeaturedProjects() {
   return (
@@ -18,32 +18,24 @@ function FeaturedProjects() {
         </h2>
 
         {/* Grid */}
-        <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project: Project, index: number) => (
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          {projects.map((project, index) => (
             <div
               key={project.id}
+              className="overflow-hidden rounded-xl shadow-md break-inside-avoid"
               data-aos="fade-up"
-              data-aos-delay={index * 150}
-              className="group cursor-pointer transition-all duration-500"
+              data-aos-delay={index * 100}
             >
-              {/* Image Container */}
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
-                {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-64 group-hover:scale-110 transition-transform duration-700 ease-in-out"
-                />
-
-                {/* Gradient Overlay for readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
-
-                {/* Title on top of the image */}
-                <div className="absolute bottom-4 left-4 right-4 z-20">
-                  <h3 className="text-lg font-medium text-white group-hover:text-primary-gold transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                </div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]"
+              />
+              {/* Title on top of the image */}
+              <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/70 via-black/40 to-transparent px-4 py-3">
+                <h3 className="text-lg font-medium text-white group-hover:text-primary-gold transition-colors duration-300 drop-shadow-sm">
+                  {project.title}
+                </h3>
               </div>
             </div>
           ))}

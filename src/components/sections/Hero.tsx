@@ -1,4 +1,4 @@
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../ui/ButtonLink";
 
 export default function Hero() {
   return (
