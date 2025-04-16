@@ -5,7 +5,7 @@ function Aboute() {
         {/* Image */}
         <div className="w-full md:w-1/2" data-aos="fade-right">
           <img
-            src="./images/image4.jpg"
+            src="./images/image4.webp"
             alt="Architecture Studio"
             className="rounded-lg object-cover w-full h-auto shadow-lg hover:scale-smooth"
           />
