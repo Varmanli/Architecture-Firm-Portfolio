@@ -1,11 +1,11 @@
-import heroImage from "../../assets/images/image15.jpg";
+import ButtonLink from "./ButtonLink";
 
 export default function Hero() {
   return (
     <section className="relative w-full h-screen">
       {/* Background image */}
       <img
-        src={heroImage}
+        src="./images/image15.jpg"
         alt="Architecture background"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -31,17 +31,7 @@ export default function Hero() {
           We craft timeless architecture that balances innovation with elegance.
         </p>
 
-        <a
-          href="#projects"
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="group inline-flex items-center gap-3 px-6 py-3 border border-white rounded-lg text-white hover:bg-white hover:text-black transition-all duration-300 ease-in-out btn-transition btn-hover-gold"
-        >
-          View Projects
-          <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </a>
+        <ButtonLink href="/portfolio" label="View Projects" delay={450} />
       </div>
     </section>
   );

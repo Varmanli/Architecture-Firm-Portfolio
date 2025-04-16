@@ -1,5 +1,3 @@
-import image from "../../assets/images/image4.jpg";
-
 function Aboute() {
   return (
     <section className="bg-hero-dark text-white py-20 px-6 md:px-20 overflow-hidden">
@@ -7,7 +5,7 @@ function Aboute() {
         {/* Image */}
         <div className="w-full md:w-1/2" data-aos="fade-right">
           <img
-            src={image}
+            src="./images/image4.jpg"
             alt="Architecture Studio"
             className="rounded-lg object-cover w-full h-auto shadow-lg hover:scale-smooth"
           />

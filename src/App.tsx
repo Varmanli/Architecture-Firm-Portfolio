@@ -3,6 +3,7 @@ import Hero from "./components/sections/Hero";
 import AOS from "aos";
 import Header from "./components/sections/Header";
 import Aboute from "./components/sections/Aboute";
+import FeaturedProjects from "./components/sections/FeaturedProjects";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Hero />
       <Aboute />
+      <FeaturedProjects />
     </main>
   );
 }
