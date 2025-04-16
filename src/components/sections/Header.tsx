@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../assets/images/logo.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +9,7 @@ export default function Header() {
     <header className="absolute top-0 left-0 z-30 w-full px-5 py-4 lg:px-20 flex items-center justify-between text-white font-sans">
       {/* Logo */}
       <a href="/" className="flex items-center">
-        <img src={logo} alt="logo" className="w-20 object-contain" />
+        <img src="./logo.png" alt="logo" className="w-20 object-contain" />
       </a>
 
       {/* Desktop Navigation */}

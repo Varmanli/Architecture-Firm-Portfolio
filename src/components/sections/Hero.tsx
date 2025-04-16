@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-3 h-full px-4 text-center text-white">
         <h1
           className="text-4xl md:text-6xl font-serif font-semibold tracking-wide mb-4 text-primary-gold"
           data-aos="fade-up"
