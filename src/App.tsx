@@ -4,6 +4,10 @@ import AOS from "aos";
 import Header from "./components/sections/Header";
 import Aboute from "./components/sections/Aboute";
 import FeaturedProjects from "./components/sections/FeaturedProjects";
+import Services from "./components/sections/Services";
+import ClientsSlider from "./components/sections/ClientsSlider";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 function App() {
   useEffect(() => {
@@ -20,6 +24,10 @@ function App() {
       <Hero />
       <Aboute />
       <FeaturedProjects />
+      <Services />
+      <ClientsSlider />
+      <Contact />
+      <Footer />
     </main>
   );
 }

@@ -14,18 +14,16 @@
     background-color: #1a1a1a;
   }
 
-  /* 🟡 رنگ طلایی برند */
+
   .text-primary-gold {
     color: #e3b041;
   }
 
-  /* 🖼️ افکت بزرگ‌نمایی نرم برای تصاویر */
   .hover\:scale-smooth:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
   }
 
-  /* ✨ دکمه با ترنزیشن رنگ و بک‌گراند */
   .btn-transition {
     transition: all 0.3s ease-in-out;
   }

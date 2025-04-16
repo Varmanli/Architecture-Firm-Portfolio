@@ -9,3 +9,4 @@ export interface ButtonLinkProps {
   label: string;
   delay?: number;
 }
+declare module "*.css";
