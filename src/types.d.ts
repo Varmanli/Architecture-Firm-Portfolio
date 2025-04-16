@@ -9,4 +9,5 @@ export interface ButtonLinkProps {
   label: string;
   delay?: number;
 }
+declare module "swiper/css";
 declare module "*.css";

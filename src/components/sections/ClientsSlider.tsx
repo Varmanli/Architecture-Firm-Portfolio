@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.min.css";
+import "swiper/css";
 
 export default function ClientsSlider() {
   const logos = [
