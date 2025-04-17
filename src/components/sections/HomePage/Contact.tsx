@@ -12,7 +12,7 @@ export default function Contact({
   className = "",
 }: ContactProps) {
   return (
-    <section id={id} className={`px-6 md:px-20 ${className}`}>
+    <section id={id} className={`md:px-20 ${className}`}>
       <div className="max-w-6xl mx-auto">
         <h2
           className="text-3xl md:text-4xl font-semibold text-primary-gold mb-12 text-center"

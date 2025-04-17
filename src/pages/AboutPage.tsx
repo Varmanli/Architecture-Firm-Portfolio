@@ -12,10 +12,10 @@ export default function AboutPage() {
           <p className="text-primary-gold text-sm uppercase tracking-wider mb-2">
             Welcome to Archi Studio
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-primary-gold font-serif mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-primary-gold font-serif mb-4">
             Designing Future Spaces
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-300 text-sm md:text-lg leading-relaxed">
             At Archi Studio, we don't just build structures — we shape
             experiences. With a passion for timeless elegance and functional
             innovation, we craft spaces that inspire.
@@ -24,8 +24,20 @@ export default function AboutPage() {
 
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-          {/* Text */}
-          <div data-aos="fade-right">
+          {/* Image (goes first on mobile) */}
+          <div
+            className="order-1 md:order-2 relative group"
+            data-aos="fade-left"
+          >
+            <img
+              src="/images/About.webp"
+              alt="Archi Studio Team"
+              className="rounded-xl shadow-xl object-cover w-full h-[400px] group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Text (goes second on mobile) */}
+          <div className="order-2 md:order-1" data-aos="fade-right">
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4 font-serif">
               Who We Are
             </h2>
@@ -52,15 +64,6 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Image */}
-          <div className="relative group" data-aos="fade-left">
-            <img
-              src="/images/About.webp"
-              alt="Archi Studio Team"
-              className="rounded-xl shadow-xl object-cover w-full h-[400px] group-hover:scale-105 transition-transform duration-500"
-            />
           </div>
         </div>
 

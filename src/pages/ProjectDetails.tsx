@@ -28,22 +28,11 @@ export default function ProjectDetails() {
     <section className="bg-black text-white overflow-x-hidden py-24 px-6 md:px-20 min-h-screen relative">
       <div className="absolute top-0 left-0 w-full h-140 bg-gradient-to-b from-white/10 via-white/0 to-transparent pointer-events-none z-10" />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-20 relative ">
-        {/* Text */}
-        <div data-aos="fade-right">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary-gold mb-6 font-serif">
-            {project.title}
-          </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10">
-            {project.description}
-          </p>
-          <ButtonLink href="/portfolio" label="Back to Projects" />
-        </div>
-
-        {/* Gallery */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-20 relative">
+        {/* Gallery (goes first on mobile) */}
         <div
           data-aos="fade-left"
-          className="w-full rounded-xl overflow-hidden bg-white/5 backdrop-blur-md p-4 border border-white/10 shadow-lg"
+          className="order-1 md:order-2 w-full rounded-xl overflow-hidden bg-white/5 backdrop-blur-md p-4 border border-white/10 shadow-lg"
         >
           <Swiper
             spaceBetween={20}
@@ -66,6 +55,17 @@ export default function ProjectDetails() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+        {/* Text (goes second on mobile) */}
+        <div data-aos="fade-right" className="order-2 md:order-1">
+          <h1 className="text-3xl md:text-4xl font-bold text-primary-gold mb-6 font-serif">
+            {project.title}
+          </h1>
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10">
+            {project.description}
+          </p>
+          <ButtonLink href="/portfolio" label="← Back to Projects" />
         </div>
       </div>
 

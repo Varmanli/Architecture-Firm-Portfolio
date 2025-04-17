@@ -31,7 +31,7 @@ export default function Hero() {
           We craft timeless architecture that balances innovation with elegance.
         </p>
 
-        <ButtonLink href="/portfolio" label="View Projects  →" delay={450} />
+        <ButtonLink href="/portfolio" label="View Projects →" delay={450} />
       </div>
     </section>
   );

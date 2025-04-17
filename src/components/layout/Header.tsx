@@ -1,40 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../../data/navLinks";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  const renderNavItem = ({ label, href }: { label: string; href: string }) => {
-    // Scroll links (anchor links like #about-us)
-    if (href.startsWith("#")) {
-      return (
-        <a
-          key={href}
-          href={href}
-          onClick={closeMenu}
-          className="nav-link hover:text-primary-gold transition-colors duration-200"
-        >
-          {label}
-        </a>
-      );
+  // Scroll to section if hash exists in URL
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     }
+  }, [location]);
 
-    // Real route links
-    return (
-      <Link
-        key={href}
-        to={href}
-        onClick={closeMenu}
-        className="nav-link hover:text-primary-gold transition-colors duration-200"
-      >
-        {label}
-      </Link>
-    );
-  };
+  const renderNavItem = ({ label, href }: { label: string; href: string }) => (
+    <Link
+      key={href}
+      to={href}
+      onClick={closeMenu}
+      className="nav-link hover:text-primary-gold transition-colors duration-200"
+    >
+      {label}
+    </Link>
+  );
 
   return (
     <header className="absolute top-0 left-0 z-30 w-full px-5 py-4 lg:px-20 flex items-center justify-between text-white font-sans">
@@ -43,12 +37,12 @@ export default function Header() {
         <img src="/logo.png" alt="logo" className="w-20 object-contain" />
       </Link>
 
-      {/* Desktop Navigation */}
+      {/* Desktop Nav */}
       <nav className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wider">
         {navLinks.map(renderNavItem)}
       </nav>
 
-      {/* Hamburger Icon */}
+      {/* Hamburger */}
       <div className="md:hidden z-40">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
