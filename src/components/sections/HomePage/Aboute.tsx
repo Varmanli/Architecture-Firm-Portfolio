@@ -1,3 +1,5 @@
+import ButtonLink from "../../ui/ButtonLink";
+
 export default function Aboute() {
   return (
     <section
@@ -26,11 +28,12 @@ export default function Aboute() {
           <h2 className="text-3xl md:text-4xl font-semibold mb-5 text-primary-gold font-serif">
             About Our Studio
           </h2>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
             At Archi Studio, we believe in timeless design rooted in modern
             functionality. Our team combines creativity with precision to create
             architectural experiences that inspire and endure.
           </p>
+          <ButtonLink label="Learn More" href="/About" />
         </div>
       </div>
     </section>

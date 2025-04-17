@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 import { Project } from "../types";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +10,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Contact from "../components/sections/HomePage/Contact";
+import ButtonLink from "../components/ui/ButtonLink";
 
 export default function ProjectDetails() {
   const { slug } = useParams();
@@ -36,12 +37,7 @@ export default function ProjectDetails() {
           <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10">
             {project.description}
           </p>
-          <Link
-            to="/portfolio"
-            className="inline-block px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition-all duration-300"
-          >
-            ← Back to Projects
-          </Link>
+          <ButtonLink href="/portfolio" label="← Back to Projects" />
         </div>
 
         {/* Gallery */}
