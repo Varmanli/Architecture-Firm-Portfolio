@@ -37,7 +37,7 @@ export default function PortfolioPage() {
               </div>
 
               <div className="p-5">
-                <h3 className="text-lg font-semibold font-serif text-white group-hover:text-primary-gold transition-colors duration-300">
+                <h3 className="text-lg font-semibold font-serif text-primary-gold group-hover:text-primary-gold transition-colors duration-300">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-300 mt-2 leading-relaxed">
