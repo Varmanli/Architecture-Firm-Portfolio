@@ -1,8 +1,11 @@
-function Aboute() {
+export default function Aboute() {
   return (
-    <section className="bg-hero-dark text-white py-20 px-6 md:px-20 overflow-hidden">
+    <section
+      id="about-us"
+      className="bg-hero-dark py-20 px-6 md:px-20 overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        {/* Image */}
+        {/* Left Side - Image */}
         <div className="w-full md:w-1/2" data-aos="fade-right">
           <img
             src="./images/image4.webp"
@@ -11,7 +14,7 @@ function Aboute() {
           />
         </div>
 
-        {/* Text */}
+        {/* Right Side - Text Content */}
         <div
           className="w-full md:w-1/2 text-center md:text-left"
           data-aos="fade-left"
@@ -33,5 +36,3 @@ function Aboute() {
     </section>
   );
 }
-
-export default Aboute;

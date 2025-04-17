@@ -1,13 +1,10 @@
 import { useEffect } from "react";
-import Hero from "./components/sections/Hero";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
-import Header from "./components/sections/Header";
-import Aboute from "./components/sections/Aboute";
-import FeaturedProjects from "./components/sections/FeaturedProjects";
-import Services from "./components/sections/Services";
-import ClientsSlider from "./components/sections/ClientsSlider";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/sections/Footer";
+import Home from "./pages/Home";
+import PortfolioPage from "./pages/PortfolioPage";
+import ProjectDetails from "./pages/ProjectDetails";
+import Layout from "./components/layout/Layout";
 
 function App() {
   useEffect(() => {
@@ -19,16 +16,15 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <Header />
-      <Hero />
-      <Aboute />
-      <FeaturedProjects />
-      <Services />
-      <ClientsSlider />
-      <Contact />
-      <Footer />
-    </main>
+    <Router>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/portfolio/:slug" element={<ProjectDetails />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

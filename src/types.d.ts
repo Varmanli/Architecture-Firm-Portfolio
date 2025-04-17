@@ -1,9 +1,12 @@
 export interface Project {
   id: number;
   title: string;
-  image: string;
-  slug?: string;
+  slug: string;
+  thumbnail: string;
+  description: string;
+  gallery: string[];
 }
+
 export interface ButtonLinkProps {
   href: string;
   label: string;

@@ -1,12 +1,14 @@
-import { projects } from "../../data/projects";
+import { projects } from "../../../data/projects";
+import ButtonLink from "../../ui/ButtonLink";
 
-import ButtonLink from "../ui/ButtonLink";
+export default function FeaturedProjects() {
+  // Limit to first 7 projects
+  const featured = projects.slice(0, 7);
 
-function FeaturedProjects() {
   return (
     <section
-      id="projects"
-      className="bg-hero-dark text-white py-20 px-6 md:px-20"
+      id="portfolio"
+      className="bg-hero-dark  py-20 px-6 md:px-20"
     >
       <div className="max-w-6xl mx-auto">
         {/* Title */}
@@ -19,15 +21,15 @@ function FeaturedProjects() {
 
         {/* Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          {projects.map((project, index) => (
+          {featured.map((project, index) => (
             <div
               key={project.id}
-              className="overflow-hidden rounded-xl shadow-md break-inside-avoid"
+              className="relative overflow-hidden rounded-xl shadow-md break-inside-avoid"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <img
-                src={project.image}
+                src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]"
               />
@@ -52,5 +54,3 @@ function FeaturedProjects() {
     </section>
   );
 }
-
-export default FeaturedProjects;
