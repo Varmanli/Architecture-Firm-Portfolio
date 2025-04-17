@@ -33,7 +33,7 @@ export default function Aboute() {
             functionality. Our team combines creativity with precision to create
             architectural experiences that inspire and endure.
           </p>
-          <ButtonLink label="Learn More" href="/About" />
+          <ButtonLink label="Learn More  →" href="/About" />
         </div>
       </div>
     </section>

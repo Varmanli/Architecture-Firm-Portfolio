@@ -37,7 +37,7 @@ export default function ProjectDetails() {
           <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10">
             {project.description}
           </p>
-          <ButtonLink href="/portfolio" label="← Back to Projects" />
+          <ButtonLink href="/portfolio" label="Back to Projects" />
         </div>
 
         {/* Gallery */}
@@ -77,7 +77,7 @@ export default function ProjectDetails() {
         slides={project.gallery.map((img) => ({ src: img }))}
         plugins={[Zoom]}
       />
-      <Contact title="Let's Work Together" />
+      <Contact title="Let's Work Together" className="py-27" />
     </section>
   );
 }

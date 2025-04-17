@@ -4,10 +4,10 @@ import Footer from "./Footer";
 
 export default function Layout() {
   return (
-    <>
+    <main className="overflow-x-hidden">
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </main>
   );
 }

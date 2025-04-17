@@ -10,9 +10,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({ href, label, delay = 0 }) => {
       className="group inline-flex items-center gap-3 px-6 py-3 border border-white rounded-lg  hover:bg-white hover:text-black transition-all duration-300 ease-in-out btn-transition btn-hover-gold"
     >
       {label}
-      <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-        →
-      </span>
+      <span className="transform transition-transform duration-300 group-hover:translate-x-1"></span>
     </Link>
   );
 };

@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { clients } from "../../../data/clients";
+import { Autoplay } from "swiper/modules";
 
 export default function ClientsSlider() {
   return (
@@ -13,7 +14,8 @@ export default function ClientsSlider() {
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}
-          autoplay={{ delay: 1500 }}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          modules={[Autoplay]}
           loop={true}
         >
           {/* Client logos carousel */}

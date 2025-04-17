@@ -14,7 +14,7 @@ export default function Home() {
         <FeaturedProjects />
         <Services />
         <ClientsSlider />
-        <Contact />
+        <Contact className="py-27" />
       </main>
     </main>
   );

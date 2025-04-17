@@ -6,6 +6,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 import ProjectDetails from "./pages/ProjectDetails";
 import Layout from "./components/layout/Layout";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/portfolio/:slug" element={<ProjectDetails />} />
           <Route path="/About" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>
     </Router>
