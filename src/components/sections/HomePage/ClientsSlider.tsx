@@ -23,6 +23,7 @@ export default function ClientsSlider() {
             <SwiperSlide key={index}>
               <div className="flex items-center justify-center">
                 <img
+                  loading="lazy"
                   src={logo}
                   alt={`client-${index}`}
                   className="w-28 h-auto opacity-100 transition duration-300"

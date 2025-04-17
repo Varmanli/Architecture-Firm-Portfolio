@@ -44,6 +44,7 @@ export default function ProjectDetails() {
             {project.gallery.map((image, index) => (
               <SwiperSlide key={index}>
                 <img
+                  loading="lazy"
                   src={image}
                   alt={`${project.title} ${index + 1}`}
                   onClick={() => {

@@ -6,10 +6,7 @@ export default function FeaturedProjects() {
   const featured = projects.slice(0, 7);
 
   return (
-    <section
-      id="portfolio"
-      className="bg-hero-dark  py-20 px-6 md:px-20"
-    >
+    <section id="portfolio" className="bg-hero-dark  py-20 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2
@@ -26,9 +23,10 @@ export default function FeaturedProjects() {
               key={project.id}
               className="relative overflow-hidden rounded-xl shadow-md break-inside-avoid"
               data-aos="fade-up"
-              data-aos-delay={index * 100}
+              data-aos-delay={index * 70}
             >
               <img
+                loading="lazy"
                 src={project.thumbnail}
                 alt={project.title}
                 className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]"

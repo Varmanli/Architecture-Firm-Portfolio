@@ -30,6 +30,7 @@ export default function AboutPage() {
             data-aos="fade-left"
           >
             <img
+              loading="lazy"
               src="/images/About.webp"
               alt="Archi Studio Team"
               className="rounded-xl shadow-xl object-cover w-full h-[400px] group-hover:scale-105 transition-transform duration-500"

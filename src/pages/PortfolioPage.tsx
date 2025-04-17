@@ -23,10 +23,11 @@ export default function PortfolioPage() {
               key={project.id}
               className="group block overflow-hidden rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary-gold hover:shadow-xl hover:shadow-primary-gold/10 transition-all duration-500 ease-in-out"
               data-aos="fade-up"
-              data-aos-delay={index * 100}
+              data-aos-delay={index * 70}
             >
               <div className="relative overflow-hidden">
                 <img
+                  loading="lazy"
                   src={project.thumbnail}
                   alt={project.title}
                   className="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105"

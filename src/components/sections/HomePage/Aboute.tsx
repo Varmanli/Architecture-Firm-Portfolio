@@ -10,6 +10,7 @@ export default function Aboute() {
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2" data-aos="fade-right">
           <img
+            loading="lazy"
             src="./images/image4.webp"
             alt="Architecture Studio"
             className="rounded-lg object-cover w-full h-auto shadow-lg hover:scale-smooth"

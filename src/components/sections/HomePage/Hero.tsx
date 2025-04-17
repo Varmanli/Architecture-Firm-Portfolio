@@ -5,6 +5,7 @@ export default function Hero() {
     <section className="relative w-full h-screen">
       {/* Background image */}
       <img
+        loading="lazy"
         src="./images/image15.webp"
         alt="Architecture background"
         className="absolute inset-0 w-full h-full object-cover"
