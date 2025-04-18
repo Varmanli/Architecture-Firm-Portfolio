@@ -12,5 +12,12 @@ export interface ButtonLinkProps {
   label: string;
   delay?: number;
 }
+
+export interface ContactProps {
+  title?: string;
+  id?: string;
+  className?: string;
+}
+
 declare module "swiper/css";
 declare module "*.css";
