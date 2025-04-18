@@ -36,10 +36,10 @@ Architecture Firm Portfolio is a front-end web application crafted to highlight 
 
 - **React**: For building a dynamic and component-based user interface.
 - **React Router**: Enables seamless navigation and dynamic routing.
-- **React-Slick**: Powers the image carousel for project details.
-- **Formik & Yup**: Handles form management and client-side validation.
-- **CSS (Flexbox/Grid)**: Custom styles for responsive and modern layouts.
-- **JavaScript (ES6+)**: Modern syntax for robust functionality.
+- **Swiper**: Powers the image carousel for project details.
+- **React Hook From & Zod**: Handles form management and client-side validation.
+- **Tailwind & CSS (Flexbox/Grid)**: Custom styles for responsive and modern layouts.
+- **TypeScript (ES6+)**: Modern syntax for robust functionality.
 - **Vite**: Fast build tool for development and production optimization.
 - **Git/GitHub**: Version control and project hosting.
 
@@ -151,15 +151,11 @@ Contributions are welcome! To contribute:
 
 Please ensure your code follows the project's style guidelines and includes appropriate tests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 For questions, feedback, or collaboration:
 
 - **GitHub**: [Varmanli](https://github.com/Varmanli)
-- **Email**: [varmanliamirhosein@Gmail.com] (replace with your email if desired)
+- **Website**: [Varmanli](https://varmanli.ir/)
 
 Thank you for exploring Architecture Firm Portfolio! Enjoy the experience.
