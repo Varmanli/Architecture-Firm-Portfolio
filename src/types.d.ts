@@ -19,5 +19,18 @@ export interface ContactProps {
   className?: string;
 }
 
+// Define interface for navigation link
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+// Define interface for service data
+export interface Service {
+  title: string;
+  description: string;
+  icon: React.ReactNode; // For React icons or JSX elements
+}
+
 declare module "swiper/css";
 declare module "*.css";

@@ -17,3 +17,14 @@ export const services = [
     description: "Beautiful interiors that blend style with purpose.",
   },
 ];
+// Constants for section configuration and content
+export const SERVICES_SECTION_CONFIG = {
+  id: "services",
+  title: "Our Services",
+};
+
+// Constants for accessibility attributes
+export const SERVICES_ARIA_LABELS = {
+  section: "Our services overview",
+  service: (title: string) => `Details for ${title} service`,
+};

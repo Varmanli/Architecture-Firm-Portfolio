@@ -156,6 +156,6 @@ Please ensure your code follows the project's style guidelines and includes appr
 For questions, feedback, or collaboration:
 
 - **GitHub**: [Varmanli](https://github.com/Varmanli)
-- **Website**: [Varmanli](https://varmanli.ir/)
+- **Website**: [Varmanli.ir](https://varmanli.ir/)
 
 Thank you for exploring Architecture Firm Portfolio! Enjoy the experience.
