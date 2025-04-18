@@ -123,19 +123,19 @@ Architecture-Firm-Portfolio/
 
 ### Homepage
 
-![Homepage](screenshots/homepage.webp)
+![Homepage](./public/screenshots/homepage.webp)
 
 ### Portfolio Grid
 
-![Portfolio](screenshots/portfolio.webp)
+![Portfolio](./public/screenshots/portfolio.webp)
 
 ### Project Details
 
-![Project Details](screenshots/project-details.webp)
+![Project Details](./public/screenshots/project-details.webp)
 
 ### Contact Form
 
-![Contact Form](screenshots/contact.webp)
+![Contact Form](./public/screenshots/contact.webp)
 
 _Note: Add screenshots to the `screenshots/` folder and update the paths above if you include them._
 
